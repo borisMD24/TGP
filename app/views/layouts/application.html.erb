@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TGP</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+  <script src="https://kit.fontawesome.com/10557b428c.js" crossorigin="anonymous"></script>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%if notice%>
+      <div class="validate">
+        <div class="text">
+          potin cree
+        </div>
+        <div class=valid>
+          <i class="fas fa-check"></i>
+        </div>
+      </div>
+    <%end%>
+    <div class="content">
+      <%= yield %>
+    </div>
+  </body>
+</html>

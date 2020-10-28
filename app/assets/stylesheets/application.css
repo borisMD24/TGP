@@ -1,0 +1,102 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+ *{
+    font-family: 'Montserrat', sans-serif;
+ }
+ html, body{
+     padding: 0%;
+     margin: 0%;
+ }
+ .content{
+     width: 70%;
+     margin: 0 auto;
+ }
+ .potin{
+     margin: .5em;
+     margin-bottom: 1em;
+     padding: .5em;
+     width: fit-content;
+     display: block;
+     width: 50%;
+ }
+
+ .potin .title{
+    font-size: 1.5em;
+    margin-left: 1em;
+    font-weight: bold;
+ }
+
+ .potin .content{
+     margin: 0;
+ }
+
+ .potin .author{
+     font-size: 0.8em;
+     float: right;
+     margin-right: 2em;
+ }
+
+ .validate{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translateX(-50%) translateY(-50%);
+     height: 50vh;
+     width: 50vw;
+     border-radius: 2em;
+     background-color: seashell;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+ }
+
+ .validate  .text{
+     font-size: 2em;
+ }
+
+ .validate .valid{
+     font-size: 2.5em;
+     transition-duration: .5s;
+
+     color: #00b894;
+     animation: turn 1s running;
+ }
+
+ @keyframes turn {
+     0% {
+        transform: scale(1.1);
+        color: #636e72;
+     }
+     40% {
+         transform: rotateY(180deg);
+         color: #00b894;
+     }
+     90% {
+         transform: scale(1.1);
+         color: #00b894;
+     }
+     95%{
+         transform: scale(2);
+
+         color: #00b894;
+     }
+     100%{
+         transform: scale(1);
+         color: #00b894;
+     }
+  }
